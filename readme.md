@@ -4,6 +4,8 @@
 
 ## 功能特点
 
+<img src="https://github.com/user-attachments/assets/99b221ef-1e37-4006-97f2-2858af71337a" width="300">
+
 - 支持BV号和完整链接解析
 - 支持多种视频清晰度选择
 - 支持SESSDATA配置,可下载高清视频
