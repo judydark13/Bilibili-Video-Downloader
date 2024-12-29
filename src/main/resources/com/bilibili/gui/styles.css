@@ -1,0 +1,211 @@
+.main-container {
+    -fx-background-color: #f5f6fa;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f3542;
+}
+
+.input-container {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.url-input {
+    -fx-background-color: #f1f2f6;
+    -fx-background-radius: 4;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+}
+
+.url-input:focused {
+    -fx-background-color: white;
+    -fx-border-color: #3742fa;
+    -fx-border-radius: 4;
+}
+
+.parse-button {
+    -fx-background-color: #3742fa;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20;
+    -fx-background-radius: 4;
+}
+
+.parse-button:hover {
+    -fx-background-color: #2f3542;
+}
+
+.info-container {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.section-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f3542;
+}
+
+.info-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f3542;
+}
+
+.info-value {
+    -fx-text-fill: #57606f;
+}
+
+.download-options {
+    -fx-background-color: #f1f2f6;
+    -fx-padding: 15;
+    -fx-background-radius: 4;
+}
+
+.path-input {
+    -fx-background-color: white;
+    -fx-background-radius: 4;
+    -fx-padding: 8;
+}
+
+.browse-button {
+    -fx-background-color: #5352ed;
+    -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-background-radius: 4;
+}
+
+.browse-button:hover {
+    -fx-background-color: #3742fa;
+}
+
+.download-button {
+    -fx-background-color: #2ed573;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 12 20;
+    -fx-font-size: 14px;
+    -fx-background-radius: 4;
+}
+
+.download-button:hover {
+    -fx-background-color: #26ae60;
+}
+
+.download-button:disabled {
+    -fx-background-color: #a4b0be;
+}
+
+.progress-container {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.download-progress {
+    -fx-pref-height: 10;
+}
+
+.download-progress .bar {
+    -fx-background-color: #2ed573;
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.download-progress .track {
+    -fx-background-color: #f1f2f6;
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+}
+
+.progress-text {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ed573;
+    -fx-font-size: 14px;
+    -fx-alignment: center-right;
+}
+
+.log-container {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.log-area {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 4;
+    -fx-border-color: #dfe4ea;
+    -fx-border-radius: 4;
+    -fx-font-family: monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: #2f3542;
+}
+
+.log-area .content {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 4;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 4;
+    -fx-border-color: #dfe4ea;
+    -fx-border-radius: 4;
+    -fx-padding: 4;
+}
+
+.combo-box:hover {
+    -fx-border-color: #3742fa;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 4 8;
+}
+
+/* 滚动条样式 */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #a4b0be;
+    -fx-background-radius: 6;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+}
+
+.set-sessdata-button {
+    -fx-background-color: #70a1ff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20;
+    -fx-background-radius: 4;
+}
+
+.set-sessdata-button:hover {
+    -fx-background-color: #5352ed;
+}
+
+.help-button {
+    -fx-background-color: #ff9f43;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20;
+    -fx-background-radius: 4;
+}
+
+.help-button:hover {
+    -fx-background-color: #e67e22;
+} 

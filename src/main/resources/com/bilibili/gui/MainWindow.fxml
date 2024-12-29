@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.bilibili.gui.MainController"
+      spacing="15"
+      styleClass="main-container"
+      stylesheets="@styles.css"
+      prefWidth="700"
+      prefHeight="600">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- 标题栏 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Bilibili 视频下载器" styleClass="title-label" HBox.hgrow="ALWAYS"/>
+        <Button text="使用帮助" onAction="#showHelp" styleClass="help-button"/>
+    </HBox>
+
+    <!-- 顶部输入区域 -->
+    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="input-container">
+        <TextField fx:id="urlInput" promptText="请输入B站视频链接(或者BV号)" HBox.hgrow="ALWAYS" styleClass="url-input"/>
+        <Button text="解析" onAction="#onParseVideo" styleClass="parse-button"/>
+        <Button text="设置SESSDATA" onAction="#onSetSESSDATA" styleClass="set-sessdata-button"/>
+    </HBox>
+
+    <!-- 视频信息区域 -->
+    <VBox fx:id="videoInfoPane" visible="false" spacing="15" styleClass="info-container">
+        <!-- 视频基本信息 -->
+        <GridPane vgap="10" hgap="15">
+            <columnConstraints>
+                <ColumnConstraints minWidth="80"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="标题：" styleClass="info-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label fx:id="titleText" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="UP主：" styleClass="info-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label fx:id="uploaderText" styleClass="info-value" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        </GridPane>
+
+        <!-- 下载选项 -->
+        <VBox spacing="10" styleClass="download-options">
+            <Label text="下载选项" styleClass="section-label"/>
+            
+            <GridPane vgap="10" hgap="15">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="80"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="视频质量：" styleClass="info-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <ComboBox fx:id="qualityComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity"/>
+
+                <Label text="保存路径：" styleClass="info-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <TextField fx:id="savePathInput" HBox.hgrow="ALWAYS" styleClass="path-input"/>
+                    <Button text="浏览" onAction="#onBrowseSavePath" styleClass="browse-button"/>
+                </HBox>
+            </GridPane>
+        </VBox>
+    </VBox>
+
+    <!-- 下载按钮 -->
+    <Button fx:id="downloadButton" text="开始下载" onAction="#onStartDownload" 
+            disable="true" maxWidth="Infinity" styleClass="download-button"/>
+
+    <!-- 下载进度区域 -->
+    <VBox fx:id="progressPane" visible="false" spacing="10" styleClass="progress-container">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="下载进度" styleClass="section-label"/>
+            <Label fx:id="progressText" text="0%" styleClass="progress-text" HBox.hgrow="ALWAYS"/>
+        </HBox>
+        <ProgressBar fx:id="downloadProgress" progress="0.0" maxWidth="Infinity" styleClass="download-progress"/>
+    </VBox>
+
+    <!-- 日志区域 -->
+    <VBox spacing="10" VBox.vgrow="ALWAYS" styleClass="log-container">
+        <Label text="日志" styleClass="section-label"/>
+        <TextArea fx:id="logArea" editable="false" wrapText="true" styleClass="log-area" VBox.vgrow="ALWAYS" minHeight="200"/>
+    </VBox>
+
+</VBox> 
